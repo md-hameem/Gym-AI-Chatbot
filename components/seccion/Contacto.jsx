@@ -55,31 +55,23 @@ export default function Contact() {
           </ul>
         </div>
         <div className={styles.containHorarios}>
-          <h2>About Me</h2>
+          <h2>Technologies Used</h2>
           <ul>
             <li>
               <p>
-                <strong> Monday - Friday</strong>
+                <strong>Frontend</strong>
               </p>
             </li>
             <li className={styles.info}>
-              <p> 8:00 AM to 10:00 PM</p>
+              <p> React.js, Next.js, CSS, JS, Node.js</p>
             </li>
             <li>
               <p>
-                <strong> Saturday</strong>
+                <strong> Backend</strong>
               </p>
             </li>
             <li className={styles.info}>
-              <p> 9:00 AM to 8:00 PM</p>
-            </li>
-            <li>
-              <p>
-                <strong> Sunday</strong>
-              </p>
-            </li>
-            <li className={styles.info}>
-              <p> Closed</p>
+              <p> Python, FastAPI, Ollama, llama3</p>
             </li>
           </ul>
         </div>
