@@ -4,15 +4,18 @@ This repository contains the code for the Gym Landing project, a web application
 
 ## Features
 
-- **Frontend**: React.js, Next.js, and SCSS for styling.
-- **Backend**: FastAPI with a chatbot powered by the LLaMA3 model.
-- **AI Chatbot**: Provides gym-related assistance.
-- **Responsive Design**: Optimized for various devices.
+- **Frontend**: Built with React.js, Next.js, and SCSS for modular styling.
+- **Backend**: Developed using FastAPI, featuring a chatbot powered by the LLaMA3 model.
+- **AI Chatbot**: Provides gym-related assistance, including membership details and exercise guidance.
+- **Responsive Design**: Optimized for various devices, ensuring a seamless user experience.
+- **Dynamic Routing**: Utilizes Next.js capabilities for user-friendly URLs.
+- **Component-Based Architecture**: Reusable components for maintainability and scalability.
 
 ## Project Structure
 
 ```
 LICENSE
+project_analysis.txt
 backend/
     main.py
 frontend/
@@ -21,6 +24,21 @@ frontend/
     public/
     styles/
 ```
+
+### Backend
+- **API Endpoints**:
+  - `/`: Root endpoint for server status.
+  - `/chat`: Handles user interactions with the AI chatbot.
+- **Technologies**: Python, FastAPI, LLaMA3 model.
+- **Middleware**: CORS middleware for cross-origin requests.
+
+### Frontend
+- **Technologies**: React.js, Next.js, SCSS.
+- **Key Pages**:
+  - `index.jsx`: Homepage showcasing gym services and features.
+  - `ai-chatbot.jsx`: Dedicated page for interacting with the AI chatbot.
+  - `about.jsx`: Information about the gym and its founder.
+- **Reusable Components**: Includes navigation menus, spinners, and section-specific components.
 
 ## Getting Started
 
@@ -81,7 +99,8 @@ frontend/
 
 ## Deployment
 
-Follow the Next.js and FastAPI deployment guides to deploy the application.
+- **Frontend**: Deployable on platforms like Vercel.
+- **Backend**: Can be hosted on any server supporting Python and FastAPI.
 
 ## License
 
