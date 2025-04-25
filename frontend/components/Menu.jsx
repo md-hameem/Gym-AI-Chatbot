@@ -9,7 +9,11 @@ export default function Menu() {
     <div className={styles.containMenu}>
       <div className={styles.centerMenu}>
         <div>
-          <LogoFull />
+          <Link legacyBehavior href="/">
+            <a>
+              <LogoFull />
+            </a>
+          </Link>
         </div>
         <div className={styles.infoMenu}>
           <Link legacyBehavior href="/about">
@@ -18,11 +22,13 @@ export default function Menu() {
             </a>
           </Link>
         </div>
-        <Link legacyBehavior href="/ai-chatbot">
-          <a>
-            <p>AI Chatbot</p>
-          </a>
-        </Link>
+        <div className={styles.infoMenu}> {/* Add a wrapper div for consistent styling */}
+          <Link legacyBehavior href="/ai-chatbot">
+            <a>
+              <p>AI Chatbot</p>
+            </a>
+          </Link>
+        </div>
       </div>
     </div>
   );

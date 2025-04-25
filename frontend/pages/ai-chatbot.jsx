@@ -25,11 +25,13 @@ export default function AIChatbot() {
 
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [isThinking, setIsThinking] = useState(false);
 
   const handleSend = async () => {
     if (input.trim()) {
       setMessages([...messages, { user: true, text: input }]);
       setInput("");
+      setIsThinking(true); // Show typing animation
 
       try {
         // Send the user message to the backend
@@ -42,6 +44,8 @@ export default function AIChatbot() {
       } catch (error) {
         // Handle errors (e.g., backend not reachable)
         setMessages((prev) => [...prev, { user: false, text: "Error: Unable to connect to the AI service." }]);
+      } finally {
+        setIsThinking(false); // Hide typing animation
       }
     }
   };
@@ -69,6 +73,13 @@ export default function AIChatbot() {
                 {msg.text}
               </div>
             ))}
+            {isThinking && (
+              <div className={styles.typingIndicator}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            )}
           </div>
           <div className={styles.inputContainer}>
             <input
