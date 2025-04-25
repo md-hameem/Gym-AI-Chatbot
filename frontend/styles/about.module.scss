@@ -1,0 +1,90 @@
+/* New styles for the About page */
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    padding: 20px;
+}
+
+.aboutImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.aboutImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.aboutText {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.aboutText h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.aboutText p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.aboutText button {
+    cursor: pointer;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.aboutText button:hover {
+    background: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutImage, .aboutText {
+        flex: none;
+        width: 100%;
+    }
+
+    .aboutText h1 {
+        font-size: 2.5rem;
+    }
+
+    .aboutText p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .aboutText h1 {
+        font-size: 2rem;
+    }
+
+    .aboutText p {
+        font-size: 0.9rem;
+    }
+}
