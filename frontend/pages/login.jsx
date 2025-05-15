@@ -35,6 +35,7 @@ export default function Login() {
       setToken(response.data.access_token);
       localStorage.setItem("token", response.data.access_token); // Store token for profile page
       setMessage("Login successful!");
+      window.location.href = "/profile"; // Redirect to profile page
     } catch (error) {
       console.error("Error during login:", error);
       if (error.response && error.response.data && error.response.data.detail) {

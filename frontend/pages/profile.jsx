@@ -36,6 +36,11 @@ export default function Profile() {
     fetchProfile();
   }, [router]);
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    router.push("/login");
+  };
+
   return (
     <div>
       <Head>
@@ -63,6 +68,7 @@ export default function Profile() {
               {profile.weight && <p><strong>Weight:</strong> {profile.weight} kg</p>}
               {profile.interest && <p><strong>Interest:</strong> {profile.interest}</p>}
               {profile.date_of_birth && <p><strong>Date of Birth:</strong> {profile.date_of_birth}</p>}
+              <button onClick={handleLogout} style={{marginTop: '1.2rem', background: '#ffe600', color: '#222', border: 'none', borderRadius: '6px', padding: '0.6rem 1.5rem', fontWeight: 700, cursor: 'pointer'}}>Logout</button>
             </div>
           )}
         </div>
