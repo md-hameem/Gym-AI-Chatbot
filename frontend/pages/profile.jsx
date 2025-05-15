@@ -10,6 +10,7 @@ export default function Profile() {
   const router = useRouter();
   const [profile, setProfile] = useState(null);
   const [message, setMessage] = useState("");
+  const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -34,6 +35,10 @@ export default function Profile() {
     };
 
     fetchProfile();
+
+    // Load bookings from localStorage
+    const savedBookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+    setBookings(savedBookings);
   }, [router]);
 
   const handleLogout = () => {
@@ -70,6 +75,23 @@ export default function Profile() {
               {profile.date_of_birth && <p><strong>Date of Birth:</strong> {profile.date_of_birth}</p>}
               <button onClick={handleLogout} style={{marginTop: '1.2rem', background: '#ffe600', color: '#222', border: 'none', borderRadius: '6px', padding: '0.6rem 1.5rem', fontWeight: 700, cursor: 'pointer'}}>Logout</button>
             </div>
+          )}
+        </div>
+        {/* Booked Classes Section */}
+        <div className={styles.bookingsCard}>
+          <div className={styles.profileTitle} style={{marginBottom: '1rem'}}>My Booked Classes</div>
+          {bookings.length === 0 ? (
+            <p style={{ color: '#ffe600', fontWeight: 500 }}>No classes booked yet.</p>
+          ) : (
+            <ul className={styles.bookingsList}>
+              {bookings.map((b, i) => (
+                <li key={i} className={styles.bookingItem}>
+                  <span className={styles.className}>{b.className}</span>
+                  <span className={styles.classDate}>{b.date}</span>
+                  <span className={styles.classTime}>{b.time}</span>
+                </li>
+              ))}
+            </ul>
           )}
         </div>
       </div>

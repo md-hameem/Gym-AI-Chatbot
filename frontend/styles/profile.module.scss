@@ -58,6 +58,62 @@
   border-left: 3px solid var(--color-primary, #ffe600);
 }
 
+.bookingsCard {
+  background: #232526;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 #ffe60022;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 400px;
+  width: 100%;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #393e46;
+}
+
+.bookingsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bookingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #181a20;
+  border-radius: 8px;
+  padding: 0.8rem 1.1rem;
+  color: #ffe600;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px #ffe60011;
+  border: 1px solid #393e46;
+}
+
+.className {
+  flex: 2;
+  color: #ffe600;
+}
+
+.classDate {
+  flex: 1.2;
+  color: #00e6d0;
+  text-align: right;
+}
+
+.classTime {
+  flex: 1;
+  color: #ff6f00;
+  text-align: right;
+  margin-left: 1.2rem;
+}
+
 @media (max-width: 600px) {
   .profileCard {
     padding: 1.2rem 0.5rem 1.5rem 0.5rem;

@@ -76,10 +76,18 @@ export default function Menu() {
               minWidth: 140,
               zIndex: 100,
               boxShadow: "0 4px 16px rgba(0,0,0,0.15)",
+              overflow: "hidden",
+              transition: "all 0.3s cubic-bezier(.4,0,.2,1)",
+              animation: "dropdownFadeIn 0.4s cubic-bezier(.4,0,.2,1)",
             }}>
               <Link legacyBehavior href="/ai-chatbot">
-                <a style={{ display: "block", padding: "10px 18px", color: "#ffe600", textDecoration: "none", fontWeight: 500 }} onClick={() => setDropdownOpen(false)}>
+                <a style={{ display: "block", padding: "10px 18px", color: "#ffe600", textDecoration: "none", fontWeight: 500, transition: "background 0.2s", }} onClick={() => setDropdownOpen(false)}>
                   AI Chatbot
+                </a>
+              </Link>
+              <Link legacyBehavior href="/booking">
+                <a style={{ display: "block", padding: "10px 18px", color: "#ffe600", textDecoration: "none", fontWeight: 500, transition: "background 0.2s", borderTop: "1px solid #393e46" }} onClick={() => setDropdownOpen(false)}>
+                  Booking System
                 </a>
               </Link>
             </div>
