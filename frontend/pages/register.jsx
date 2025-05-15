@@ -10,7 +10,6 @@ export default function Register() {
     username: "",
     email: "",
     dateOfBirth: "",
-    age: "",
     height: "",
     weight: "",
     interest: "",
@@ -18,22 +17,50 @@ export default function Register() {
   });
 
   const [message, setMessage] = useState("");
+  const [ageError, setAgeError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    if (name === "dateOfBirth") {
+      // Calculate age
+      const today = new Date();
+      const dob = new Date(value);
+      let age = today.getFullYear() - dob.getFullYear();
+      const m = today.getMonth() - dob.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        age--;
+      }
+      if (age < 18) {
+        setAgeError("You must be at least 18 years old to register.");
+      } else {
+        setAgeError("");
+      }
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form data being sent:", formData); // Debugging log
+    // Calculate age from dateOfBirth
+    const today = new Date();
+    const dob = new Date(formData.dateOfBirth);
+    let age = today.getFullYear() - dob.getFullYear();
+    const m = today.getMonth() - dob.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+      age--;
+    }
+    if (age < 18) {
+      setAgeError("You must be at least 18 years old to register.");
+      return;
+    }
+    setAgeError("");
 
     // Transform formData to match backend's expected snake_case format
     const transformedData = {
       username: formData.username,
       email: formData.email,
-      date_of_birth: formData.dateOfBirth, // Convert to snake_case
-      age: formData.age,
+      date_of_birth: formData.dateOfBirth,
+      age: age,
       height: formData.height,
       weight: formData.weight,
       interest: formData.interest,
@@ -108,14 +135,7 @@ export default function Register() {
             onChange={handleChange}
             required
           />
-          <input
-            type="number"
-            name="age"
-            placeholder="Age"
-            value={formData.age}
-            onChange={handleChange}
-            required
-          />
+          {/* Age is calculated automatically and not shown as input */}
           <input
             type="number"
             name="height"
@@ -148,7 +168,8 @@ export default function Register() {
             onChange={handleChange}
             required
           />
-          <button type="submit">Register</button>
+          {ageError && <p style={{ color: '#ff3b6b', fontWeight: 600 }}>{ageError}</p>}
+          <button type="submit" disabled={!!ageError}>Register</button>
         </form>
         {message && <p>{message}</p>}
       </div>
