@@ -1,37 +1,60 @@
-.containMenu{
-    background: var(--bgDark);
-    width: 100%;
-
-    position: fixed;
-    z-index: 50;
-    top: 0;
+.containMenu {
+  background: var(--bgDark);
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.centerMenu{
-    max-width: 1150px;
-    margin: auto;
-    width: 90%;
-
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.centerMenu {
+  max-width: 1150px;
+  margin: auto;
+  width: 90%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.infoMenu{
-    border: 2px solid var(--color-primary);
-    border-radius: 8px;
-    
-    p{
-        padding: 8px;
-        color: #fff;
-    }
+.infoMenu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.infoMenu:hover {
+  background: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.infoMenu a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--bgLight);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 425px) {
-    .infoMenu{
-        display: none;
-    }
+  .infoMenu {
+    display: none;
+  }
 }
 
 
