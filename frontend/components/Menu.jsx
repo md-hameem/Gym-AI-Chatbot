@@ -34,6 +34,7 @@ export default function Menu() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("bookings"); // Clear My Booked Classes info (correct key)
     setLoggedIn(false);
     router.push("/login");
   };

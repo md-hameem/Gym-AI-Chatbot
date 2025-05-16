@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/booking.module.scss";
 import Menu from "../components/Menu";
+import Head from "next/head";
 import Contacto from "../components/seccion/Contacto";
 
 const classOptions = [
@@ -49,6 +50,13 @@ export default function Booking() {
 
   return (
     <>
+      <Head>
+        <title>Nutrition Plans & Meal Recommendations - ZZU Gym</title>
+        <meta
+          name="description"
+          content="Personalized nutrition plans and meal recommendations for your fitness goals at Triforce Club."
+        />
+      </Head>
       <Menu />
       <div className={styles.bookingContainer}>
         {!isLoggedIn ? (
