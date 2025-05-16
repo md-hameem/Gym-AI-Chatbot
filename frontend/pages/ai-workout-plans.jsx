@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/aiWorkoutPlans.module.scss";
 import Head from "next/head";
 import Menu from "../components/Menu";
@@ -149,6 +149,16 @@ export default function AIWorkoutPlans() {
   const [recommendations, setRecommendations] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    // Simple auth check: look for a token in localStorage
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        window.location.href = "/login";
+      }
+    }
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -161,7 +171,7 @@ export default function AIWorkoutPlans() {
   return (
     <>
       <Head>
-        <title>Fitness Dashboard - ZZU Gym</title>
+        <title>Workout Plan - ZZU Gym</title>
         <meta
           name="description"
           content="Track your fitness progress, activity, and goals at Triforce Club."

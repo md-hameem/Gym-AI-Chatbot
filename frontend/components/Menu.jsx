@@ -169,6 +169,25 @@ export default function Menu() {
                   <span style={{ fontSize: 22 }}>💪</span> AI Workout Plans
                 </a>
               </Link>
+              <Link legacyBehavior href="/nutrition-plans">
+                <a
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    padding: "12px 22px",
+                    color: "#ffe600",
+                    textDecoration: "none",
+                    fontWeight: 700,
+                    fontSize: 16,
+                    transition: "background 0.2s",
+                    borderTop: "1px solid #393e46",
+                  }}
+                  onClick={() => setDropdownOpen(false)}
+                >
+                  <span style={{ fontSize: 22 }}>🥗</span> Nutrition Plans & Meal Recommendations
+                </a>
+              </Link>
             </div>
           )}
         </div>

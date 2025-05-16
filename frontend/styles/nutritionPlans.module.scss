@@ -1,0 +1,52 @@
+.nutritionPageBg {
+  min-height: 70vh;
+  background: linear-gradient(135deg, #232526 0%, #393e46 100%);
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+.nutritionContainer {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #232526;
+  padding: 32px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.nutritionTitle {
+  color: #ffe600;
+  margin-bottom: 16px;
+}
+.nutritionForm label {
+  font-weight: 600;
+}
+.nutritionForm select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #393e46;
+  margin-top: 4px;
+  background: #393e46;
+  color: #ffe600;
+  font-weight: 600;
+}
+.nutritionForm button {
+  background: #ffe600;
+  color: #232526;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(255,230,0,0.10);
+}
+.nutritionResult {
+  margin-top: 28px;
+  background: #393e46;
+  padding: 18px;
+  border-radius: 8px;
+}
+.nutritionResult h3 {
+  color: #ffe600;
+}
