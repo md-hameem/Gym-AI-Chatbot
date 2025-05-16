@@ -7,8 +7,14 @@ This repository contains the code for the Gym Landing project, a web application
 - **Frontend**: Built with React.js, Next.js, and SCSS for modular styling.
 - **Backend**: Developed using FastAPI, featuring a chatbot powered by the LLaMA3 model.
 - **AI Chatbot**: Provides gym-related assistance, including membership details and exercise guidance.
-- **Responsive Design**: Optimized for various devices, ensuring a seamless user experience.
-- **Dynamic Routing**: Utilizes Next.js capabilities for user-friendly URLs.
+- **Booking System**: Book gym classes and manage your schedule.
+- **Fitness Dashboard**: Track your daily and weekly fitness progress.
+- **AI Workout Plans**: Generate personalized workout routines.
+- **Nutrition Plans**: Get meal and nutrition recommendations.
+- **Authentication**: Secure login and registration for users.
+- **Profile Management**: View and manage your bookings and personal info.
+- **Responsive Design**: Optimized for all devices.
+- **Dynamic Routing**: User-friendly URLs via Next.js.
 - **Component-Based Architecture**: Reusable components for maintainability and scalability.
 
 ## Project Structure
@@ -18,11 +24,41 @@ LICENSE
 project_analysis.txt
 backend/
     main.py
+    requirements.txt
 frontend/
     components/
+        Menu.jsx
+        spinner.jsx
+        btonTop.jsx
+        seccion/
+            Inicio.jsx
+            Ofertas.jsx
+            Planes.jsx
+            Instructores.jsx
+            Imc.jsx
+            Contacto.jsx
+            about.jsx
     pages/
+        _app.js
+        index.jsx
+        ai-chatbot.jsx
+        ai-workout-plans.jsx
+        booking.jsx
+        fitness-dashboard.jsx
+        nutrition-plans.jsx
+        profile.jsx
+        login.jsx
+        register.jsx
+        about.jsx
+        api/
+            hello.js
     public/
+        ico.svg
+        imgGym/
+        imgTeam/
+        videosGym/
     styles/
+        (SCSS modules for each page/component)
 ```
 
 ### Backend
@@ -35,10 +71,17 @@ frontend/
 ### Frontend
 - **Technologies**: React.js, Next.js, SCSS.
 - **Key Pages**:
-  - `index.jsx`: Homepage showcasing gym services and features.
-  - `ai-chatbot.jsx`: Dedicated page for interacting with the AI chatbot.
-  - `about.jsx`: Information about the gym and its founder.
-- **Reusable Components**: Includes navigation menus, spinners, and section-specific components.
+  - `index.jsx`: Homepage with gym services, plans, instructors, and contact.
+  - `ai-chatbot.jsx`: Chat with the AI-powered gym assistant.
+  - `ai-workout-plans.jsx`: Get AI-generated workout plans.
+  - `nutrition-plans.jsx`: Personalized meal and nutrition plans.
+  - `booking.jsx`: Book gym classes.
+  - `fitness-dashboard.jsx`: Track fitness progress and activity.
+  - `profile.jsx`: Manage bookings and view user info.
+  - `login.jsx` & `register.jsx`: User authentication.
+  - `about.jsx`: Info about the gym and founder.
+- **Reusable Components**: Navigation menu, spinner, scroll-to-top button, and modular homepage sections.
+- **Media Assets**: Images and videos for gym, trainers, and promotions.
 
 ## Getting Started
 
