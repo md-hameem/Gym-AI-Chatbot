@@ -92,7 +92,7 @@ export default function Menu() {
                 </a>
               </Link>
               <Link legacyBehavior href="/fitness-dashboard">
-                <a style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 22px", color: "#00ffb3", textDecoration: "none", fontWeight: 700, fontSize: 16, transition: "background 0.2s", borderTop: "1px solid #393e46", background: "linear-gradient(90deg, #232526 60%, #00ffb3 120%)", boxShadow: "0 2px 8px rgba(0,255,179,0.08)", }} onClick={() => setDropdownOpen(false)}>
+                <a style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 22px", color: "#ffe600", textDecoration: "none", fontWeight: 700, fontSize: 16, transition: "background 0.2s", borderTop: "1px solid #393e46"}} onClick={() => setDropdownOpen(false)}>
                   <span style={{fontSize:22}}>📈</span> Fitness Tracking & Progress
                 </a>
               </Link>
