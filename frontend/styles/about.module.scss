@@ -59,32 +59,95 @@
     background: #0056b3;
 }
 
+.projectOverviewSection {
+  margin: 48px auto 0 auto;
+  max-width: 700px;
+  background: #000; /* Set background to black */
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  padding: 36px 28px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectOverviewSection h2 {
+  font-size: 2.1rem;
+  margin-bottom: 28px;
+  color: #4fd1c5;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.projectTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #111; /* Fill the table background */
+  font-size: 1.08rem;
+  color: #e0e0e0;
+  margin: 0 auto;
+}
+
+.projectTable th, .projectTable td {
+  border: 1px solid #333;
+  padding: 16px 18px;
+  text-align: left;
+  vertical-align: top;
+  background: #111; /* Fill all cells with table background */
+}
+
+.projectTable th {
+  background: #23272f;
+  color: #4fd1c5;
+  font-size: 1.13rem;
+  font-weight: 600;
+}
+
+.projectTable tr:nth-child(even) {
+  background: #181818;
+}
+
+.projectTable tr:nth-child(odd) {
+  background: #111;
+}
+
+.projectTable ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .projectOverviewSection {
+    max-width: 98vw;
+    padding: 18px 2vw;
+  }
+  .projectTable th, .projectTable td {
+    padding: 10px 6px;
+    font-size: 0.98rem;
+  }
+  .projectOverviewSection h2 {
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
-    .aboutContainer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .aboutImage, .aboutText {
-        flex: none;
-        width: 100%;
-    }
-
-    .aboutText h1 {
-        font-size: 2.5rem;
-    }
-
-    .aboutText p {
-        font-size: 1rem;
-    }
+  .projectOverviewSection {
+    margin-top: 32px;
+    padding: 10px 2vw;
+  }
+  .projectTable th, .projectTable td {
+    padding: 8px 4px;
+    font-size: 0.93rem;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .aboutText h1 {
-        font-size: 2rem;
-    }
-
-    .aboutText p {
-        font-size: 0.9rem;
-    }
+  .projectOverviewSection h2 {
+    font-size: 1.1rem;
+  }
+  .projectTable th, .projectTable td {
+    font-size: 0.85rem;
+    padding: 6px 2px;
+  }
 }
