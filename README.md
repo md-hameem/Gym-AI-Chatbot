@@ -29,7 +29,11 @@ frontend/
     components/
         Menu.jsx
         spinner.jsx
+        bton.jsx
         btonTop.jsx
+        chevron.js
+        logo.js
+        logoFull.js
         seccion/
             Inicio.jsx
             Ofertas.jsx
@@ -54,11 +58,44 @@ frontend/
             hello.js
     public/
         ico.svg
+        hamim.jpg
+        ishfar.jpg
         imgGym/
+            imc.jpg
+            inicio.jpg
+            logo.png
+            man.png
+            woman.png
         imgTeam/
+            trainer1.jpg
+            trainer2.jpg
+            trainer3.jpg
+            trainer4.jpg
         videosGym/
+            boxeo.mp4
+            cardio.mp4
+            fuerza.mp4
+            yoga.mp4
     styles/
-        (SCSS modules for each page/component)
+        about.module.scss
+        aiWorkoutPlans.module.scss
+        booking.module.scss
+        btonTop.module.scss
+        chatbot.module.scss
+        contacto.module.scss
+        fitnessDashboard.module.scss
+        globals.css
+        imc.module.scss
+        inicio.module.scss
+        Instructores.module.scss
+        login.module.scss
+        menu.module.scss
+        nutritionPlans.module.scss
+        ofertas.module.scss
+        planes.module.scss
+        profile.module.scss
+        register.module.scss
+        spinner.module.scss
 ```
 
 ### Backend
@@ -80,8 +117,9 @@ frontend/
   - `profile.jsx`: Manage bookings and view user info.
   - `login.jsx` & `register.jsx`: User authentication.
   - `about.jsx`: Info about the gym and founder.
-- **Reusable Components**: Navigation menu, spinner, scroll-to-top button, and modular homepage sections.
-- **Media Assets**: Images and videos for gym, trainers, and promotions.
+- **Reusable Components**: Navigation menu, spinner, scroll-to-top button, modular homepage sections, and utility components (`bton.jsx`, `chevron.js`, `logo.js`, `logoFull.js`).
+- **Media Assets**: Images (`hamim.jpg`, `ishfar.jpg`, `imgGym/`, `imgTeam/`), and videos (`videosGym/`).
+- **Styling**: Each page/component has a corresponding SCSS module in `styles/` for modular and maintainable styling.
 
 ## Getting Started
 
@@ -155,4 +193,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## Contact
 
-For inquiries, contact Ishfar Bin Rashid at ishfar@gmail.com.
+For inquiries, contact Ishfar Bin Rashid at hamimmd555@gmail.com.
