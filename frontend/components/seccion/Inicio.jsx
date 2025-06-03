@@ -14,7 +14,7 @@ export default function Inicio({ onLoadingComplete }) {
         <p>
           Zhengzhou University offers a comprehensive range of sports and
           fitness facilities designed to support the health and well-being of
-          its students and staff. The university's gymnasium is a modern
+          its students and staff. The university&apos;s gymnasium is a modern
           facility equipped with various amenities, including treadmills,
           dumbbells, and spaces for yoga and muscle-strengthening exercises.
           These facilities are distributed across all campuses, ensuring

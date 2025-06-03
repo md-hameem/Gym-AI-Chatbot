@@ -22,10 +22,10 @@ export default function Contact() {
           <p>100 Ke Xue Avenue, Zhongyuan Zhengzhou 450001 Henan China</p>
 
           <h3>Phone</h3>
-          <p>+8615617724195</p>
+          <p>+8615515635969</p>
 
           <h3>Email</h3>
-          <p>ishfar@gmail.com</p>
+          <p>hamimmd555@gmail.com</p>
         </div>
       </div>
 
@@ -34,7 +34,7 @@ export default function Contact() {
           <LogoFull />
           <p>
             Copyright © 2025 <br />
-            Made by{" Ishfar Bin Rashid"}
+            Made by{" Mohammad Hamim"}
           </p>
         </div>
         <div className={styles.containClases}>

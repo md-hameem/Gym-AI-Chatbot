@@ -57,6 +57,7 @@ export default function Profile() {
       <Menu />
       <div className={styles.profileContainer}>
         <div className={styles.profileCard}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/imgGym/man.png"
             alt="Profile Avatar"

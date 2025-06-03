@@ -77,7 +77,7 @@ export default function FitnessDashboard() {
         </h1>
         <div className={styles.cardsGrid}>
           <div className={styles.card}>
-            <h2>Today's Activity</h2>
+            <h2>Today&apos;s Activity</h2>
             <div className={styles.metricsRow}>
               <div className={styles.metricBox}><div><b>{todaySteps !== null ? todaySteps : '--'}</b><br/>Steps</div></div>
               <div className={styles.metricBox}><div><b>{todayCalories !== null ? todayCalories : '--'}</b><br/>kcal</div></div>
