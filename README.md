@@ -1,4 +1,4 @@
-# Gym Landing Project
+# Gym Services - AI Chatbot and many more
 
 This repository contains the code for the Gym Landing project, a web application for Zhengzhou University Gym. The project includes a frontend built with Next.js and a backend powered by FastAPI.
 
